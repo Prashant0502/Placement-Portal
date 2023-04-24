@@ -1,0 +1,28 @@
+
+<head>
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/signin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <div id = "sign-in-div">
+</head>
+    <h1>
+      Welcome to Placement Cell Page
+    </h1>
+        <form id="form-input" action="/users/create-session" method="POST">
+        <label id="field-label"> UserName </label>
+        <input id="form-input-values" type="email" name="email" placeholder="Enter Email" required>
+        <label id="field-label"> Password </label>
+        <input id="form-input-values" type="password" name="password" placeholder="Enter Password" required>
+        <input id="form-submit-button" type="submit" class="submit" value="Login">
+        <p id="are-you-new-p"> Not a member ?</p>
+        <button  id="new-acc-button"> <a id="create-account-link" href="/users/sign-up"> Sign-Up Now</a></button>
+    
+</form>
+
+   
+
+
+

@@ -1,0 +1,214 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: aquamarine;
+    color: #aa1e1e;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#action-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*Buttons on top */
+
+#interview-button{
+    margin: 1rem;
+    height: 2rem;
+    width: 12rem;
+    border-radius: 4px;
+    border: none;
+    box-shadow: black;
+    background: #223bc7;
+    color: white;
+    border: 1.4px solid #eae3d6;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+
+#toggles{
+    margin: 1rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 3px;
+    border: none;
+    box-shadow: black;
+    background: #9C27B0;
+    color: white;
+    border: 1.3px solid #eae3d6;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+#to-csv-buttons{
+    margin: 1rem;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 3px;
+    border: none;
+    box-shadow: black;
+    background: deeppink;
+    color: white;
+    border: 1.3px solid #eae3d6;
+    margin-top: 1.3rem;
+    text-transform: uppercase;  
+}
+
+#logout-button{
+    margin: 1rem;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 3px;
+    border: none;
+    box-shadow: rgb(255, 0, 0);
+    background: #ff0000;
+    color:white;
+    border: 1px solid #eae3d6;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+}
+
+
+#logout{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.new-student-page
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 10px 20px 7px -5px, rgba(0, 0, 0, 0.3) 0px 8px 0px -8px;
+    padding: 2rem;
+    background-color: lightpink;
+    font-family: inherit;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+#student{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#marks{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#field-label{
+    align-self: self-start;
+    margin-left: 1rem;
+    margin-bottom: -1rem;
+}
+
+#form-input-values
+{
+    margin: 1rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 3px;
+    border: none;
+    box-shadow: black;
+    background: #ffffff;
+    border: 1px solid #cbb895;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-transform: inherit;
+    font-family: auto;
+
+}
+
+#form-input-values:hover
+{
+    margin: 1rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 3px;
+    border: none;
+    box-shadow: black;
+    background: #fcfcf1;
+    border: 1px solid #74726f;
+    font-family: 'Roboto', sans-serif;  font-family: 'Roboto', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+
+#form-submit-button{
+    margin: 1rem;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5px;
+    /* border: none; */
+    box-shadow: black;
+    background: #29802d;
+    color: #f8f4f4;
+    border: 1px solid #da2727;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+}
+
+#form-submit-button:hover{
+    margin: 1rem;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: black;
+    background: #522424;
+    color:white;
+    border: 1px solid #eae3d6;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+}
+
+#table-head{
+    background: #fff;
+    border-bottom: 4px solid #eceffa;
+}
+
+#table-head-column-name{
+    border: 1.3px solid #bb1818;
+    padding: 0.8rem;
+    word-break: break-all;
+    background-color: #13aaee61;
+    color: darkblue;
+    text-align: center;
+    font-family: math;
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+
+#student-table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: darkred;
+    font-weight: 550;
+}
+

@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title><%=title%></title>
+        <link rel="stylesheet" href="/css/home.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+    
+
+    <div id="action-btn">
+        <button id="interview-button"><a href="/interview"> Interview Schedule </a> </button>
+        <button id="toggles">Hide Student Entry Form</button>
+        <button id="to-csv-buttons" type="button" onclick="tableToCSV()" >Download CSV File</button>
+        <div id="logout">
+            <p> Hello <%= user.name %></p>
+            <button id="logout-button" ><a href="users/destroy-session"> Logout</a> </button>
+        </div>
+       
+    </div>
+    <section>
+        
+        <form class= "new-student-page" action="/students/create" id="new-student-page"  method="POST">
+            <p>Add new student entry</p>    
+            <div id="student">
+                    <input id="form-input-values" type="text" class="name-input" name="name" placeholder="Enter Student Name" required="true"></input>
+                    <input id="form-input-values" type="text" class="Branch-input" name="Branch" placeholder="Branch" required="true"></input>    
+                   <input id="form-input-values" type="text" class="batch-input" name="batch" placeholder="Batch" required="true"></input>
+                    <input id="form-input-values" type="text" class="college-input" name="college" placeholder="College" required="true"></input>    
+
+                </div>
+                <div id="marks">
+                    <input id="form-input-values" type="text" class="dsa-input" name="dsa" placeholder="dsa Marks" required="true"></input>
+                    <input id="form-input-values" type="text" class="webd-input" name="webd" placeholder="Web-d Marks" required="true"></input>
+                    <input id="form-input-values" type="text" class="react-input" name="react" placeholder="React Marks" required="true"></input>
+                </div>
+                <div id="marks">
+                <input id="form-submit-button" type="submit" value="ADD">
+                </div>
+
+  </form>
+    <section>
+    <div id="student-table">
+        <table>
+            
+            <tr id="table-head">
+              <th id="table-head-column-name">name</th>
+              <th id="table-head-column-name">Branch</th>
+              <th id="table-head-column-name">batch</th>
+              <th id="table-head-column-name">College</th>
+              <th id="table-head-column-name">DSA MARKS</th>
+              <th id="table-head-column-name">WEB-D MARKS</th>
+              <th id="table-head-column-name">REACT MARKS</th>
+              <th id="table-head-column-name">Companies Name</th>
+                 <!-- <th id="table-head-column-name">-</th> -->
+              <th id="table-head-column-name">Placement Status</th>
+             
+              
+            </tr>
+            <% for(student of students) {%>
+            <tr> 
+                <td id="table-head-column-name" > <%=student.name%> </td>
+                <td id="table-head-column-name"> <%=student.Branch%></td>
+                <td id="table-head-column-name"> <%=student.batch%></td>
+                <td id="table-head-column-name"> <%=student.college%></td>
+                <td id="table-head-column-name"> <%=student.dsa%></td>
+                <td id="table-head-column-name"> <%=student.webd%></td>
+                <td id="table-head-column-name"> <%=student.react%></td>
+                <td id="table-head-column-name"><%=student.companies%></td>
+                <td id="table-head-column-name"> <% if (student.placed) { %> Placed in <%=student.student_placed%></td><% }else{ %>Not Placed</td><% } %> 
+            
+            </tr>
+        <%}%>
+    </table>      
+    </div>    
+      
+         
+    <script type="text/javascript">
+        function tableToCSV() {
+ 
+            // Variable to store the final csv data
+            var csv_data = [];
+ 
+            // Get each row data
+            var rows = document.getElementsByTagName('tr');
+            for (var i = 0; i < rows.length; i++) {
+ 
+                // Get each column data
+                var cols = rows[i].querySelectorAll('td,th');
+ 
+                // Stores each csv row data
+                var csvrow = [];
+                for (var j = 0; j < cols.length; j++) {
+ 
+                    // Get the text data of each cell
+                    // of a row and push it to csvrow
+                    csvrow.push(cols[j].innerHTML);
+                }
+ 
+                // Combine each column value with comma
+                csv_data.push(csvrow.join(","));
+            }
+ 
+            // Combine each row data with new line character
+            csv_data = csv_data.join('\n');
+            console.log(csv_data);
+            // Call this function to download csv file 
+            downloadCSVFile(csv_data);
+ 
+        }
+ 
+        function downloadCSVFile(csv_data) {
+ 
+            // Create CSV file object and feed
+            // our csv_data into it
+            CSVFile = new Blob([csv_data], {
+                type: "text/csv"
+            });
+ 
+            // Create to temporary link to initiate
+            // download process
+            var temp_link = document.createElement('a');
+            const timestamp = Date.now();
+            const fileName = "placement-repot" + timestamp;
+            // Download csv file
+            temp_link.download = fileName + ".csv" ;
+            var url = window.URL.createObjectURL(CSVFile);
+            temp_link.href = url;
+ 
+            // This link should not be displayed
+            temp_link.style.display = "none";
+            document.body.appendChild(temp_link);
+ 
+            // Automatically click the link to
+            // trigger download
+            temp_link.click();
+            document.body.removeChild(temp_link);
+        }
+
+    </script>
+    
+
+    </section>
+    <script>
+        const targetDiv = document.getElementById("new-student-page");
+        const btn = document.getElementById("toggles");
+        btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+            targetDiv.style.display = "none";
+            btn.innerHTML = "Show New Student Form"
+        } else {
+            targetDiv.style.display= "flex";
+            btn.innerHTML = "Hide New Student Form"
+        }
+        };
+    </script>
+</html>

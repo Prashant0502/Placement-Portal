@@ -1,0 +1,132 @@
+body{
+    background-color: #ff704369;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    font-family: math;
+   
+}
+
+
+#sign-in-div{
+   
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#form-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(140, 50, 93, 0.25) 10px 20px 23px -5px, rgba(0, 0, 0, 0.3) 10px 8px 16px -8px;
+    background-color: #00ffffa8;
+    color: blue;
+    border: 3px #67a167 solid;
+    border-radius: 8px;
+}
+
+#field-label{
+    align-self: self-start;
+    margin-left: 1rem;
+    margin-bottom: -1rem;
+    color: #131213;
+}
+#form-input-values
+{
+    margin: 1rem;
+    height: 2rem;
+    width: 18rem;
+    box-shadow: black;
+    background: #f2f2e8;
+    border: 1px solid #eae3d6;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+
+#form-input-values:hover
+{
+    margin: 1rem;
+    height: 2rem;
+    width: 18rem;
+    border-radius: 5px;
+    box-shadow: black;
+    background: #fcfcf1;
+    border: 1px solid #74726f;
+    margin-top: 1.5rem;
+}
+
+
+#form-submit-button{
+    margin: 2rem;
+    height: 2rem;
+    width: 16rem;
+    border-radius: 5px;
+    background: #409543;
+    color: white;
+    border: 1px solid #020202;
+    margin-top: 1.5rem;
+    font-family: emoji;
+    font-size: medium;
+}
+
+#form-submit-button:hover{
+    margin: 2rem;
+    height: 2rem;
+    width: 16rem;
+    border-radius: 5px;
+    background: #363333;
+    color:white;
+    border: 1px solid #eae3d6;
+    margin-top: 1.5rem;
+    transform: scale(1.05) translateY(.100rem);
+}
+
+#create-account-link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#new-acc-button{
+    margin: 2rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 5px;
+    background: #da4516;
+    color: white;
+    border: 1px solid #120f0a;
+    margin-top: 1.3rem;
+    font-family: emoji;
+    font-size: medium;
+}
+
+#new-acc-button:hover{
+    margin: 2rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 5px;
+    background: rgb(42, 42, 239);
+    color:white;
+    border: 1px solid #eae3d6;
+    margin-top: 1.3rem;
+    transform: scale(1.05) translateY(.100rem);
+}
+
+#are-you-new-p{
+    margin: -13px;
+    margin-top: -8px;
+    font-family: inherit;
+}
