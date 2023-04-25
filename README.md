@@ -7,6 +7,7 @@ It is built using NodeJs, ExpressJs, MongoDB, EJS and JavaScript.
 Hosted link: https://placement-zejl.onrender.com
 
 ⚙️ Functionality
+
 User/Employee signUp and signIn
 Add student
 Allocate added student to the interview
@@ -27,7 +28,7 @@ Download the CSV report
 
 <img width="935" alt="image" src="https://user-images.githubusercontent.com/124440396/234357778-9b3e102a-4d62-4041-b7df-ef3446da18a6.png">
 
-=> Create company for Interview for the student
+=> Create company for student's Interview
 
 <img width="913" alt="image" src="https://user-images.githubusercontent.com/124440396/234358165-4f08d9e3-5b3d-43f9-9d43-5daec1f55de4.png">
 
