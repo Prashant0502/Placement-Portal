@@ -2,10 +2,10 @@
   "name": "placement_cell",
   "version": "1.0.0",
   "description": "Placement Form",
-  "main": "App.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node App.js"
+    "start": "node app.js"
   },
   "author": "Prashant Singh",
   "license": "ISC",
