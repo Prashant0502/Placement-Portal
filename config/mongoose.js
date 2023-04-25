@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.set('strictQuery',true)
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect('mongodb+srv://Prashant:Prashant@cluster0.u9atuwv.mongodb.net/test?retryWrites=true&w=majority');
 const db = mongoose.connection;
 
 db.on('err',console.error.bind(console, "error connection to DB"));
