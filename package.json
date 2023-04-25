@@ -2,7 +2,7 @@
   "name": "placement_cell",
   "version": "1.0.0",
   "description": "Placement Form",
-  "main": "app.js",
+  "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node App.js"
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "connect": "^3.7.0",
+    "connect": "^3.7.0", 
     "connect-mongo": "^3.2.0",
     "connect-mongodb-session": "^3.1.1",
     "cookie-parser": "^1.4.6",
